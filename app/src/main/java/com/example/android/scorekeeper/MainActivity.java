@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onAnimationEnd(Animation animation) {
-                react.setVisibility(View.GONE);
+                react.setVisibility(View.INVISIBLE);
             }
             @Override
             public void onAnimationRepeat(Animation animation) {

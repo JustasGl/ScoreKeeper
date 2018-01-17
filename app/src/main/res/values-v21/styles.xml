@@ -6,6 +6,13 @@
         <item name="colorButtonNormal">#4caf50</item>
         <item name="colorPrimary">#4caf50</item>
         <item name="android:statusBarColor">#4caf50</item>
-
+    </style>
+    <style name="GreenButton" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/Team_score</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 </resources>
