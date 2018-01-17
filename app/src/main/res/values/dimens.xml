@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ButtonTextSizeFaul">16sp</dimen>
+    <dimen name="MarginLeft">16dp</dimen>
+    <dimen name="MarginRight">16dp</dimen>
+    <dimen name="UpdateTextView">32sp</dimen>
+    <dimen name="UpdateTextViewMarginTop">2dp</dimen>
+    <dimen name="Team_Foul">14sp</dimen>
+    <dimen name="Team_score">16sp</dimen>
+    <dimen name="team_margintop">16dp</dimen>
+    <dimen name="linewidth">1dp</dimen>
+</resources>
