@@ -11,18 +11,27 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     Animation blink,zoom_fade;
     TextView react;
+    TextView BFouls,AFouls,BPoints,APoints;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         blink = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
         zoom_fade = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoomin_fadeout);
+
         react = findViewById(R.id.react);
+
+        BFouls=findViewById(R.id.TeamBFoulsText);
+        AFouls=findViewById(R.id.TeamAFoulsText);
+
+        BPoints=findViewById(R.id.TeamBPointsText);
+        APoints=findViewById(R.id.TeamAPointsText);
 
         zoom_fade.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
             }
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -30,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onAnimationRepeat(Animation animation) {
-
             }
         });
     }
@@ -72,30 +80,23 @@ public class MainActivity extends AppCompatActivity {
     }
     public void ShowTeamAPoints (int TeamAPoints)
     {
-        TextView t=findViewById(R.id.TeamAPointsText);
-        t.startAnimation(blink);
-        t.setText(""+TeamAPoints);
+        APoints.startAnimation(blink);
+        APoints.setText(""+TeamAPoints);
     }
     public void ShowTeamBPoints (int TeamBPoints)
     {
-
-        TextView t=findViewById(R.id.TeamBPointsText);
-        t.startAnimation(blink);
-        t.setText(""+TeamBPoints);
-
+        BPoints.startAnimation(blink);
+        BPoints.setText(""+TeamBPoints);
     }
     public void ShowTeamAFouls (int TeamAFouls)
     {
-        TextView t=findViewById(R.id.TeamAFoulsText);
-        t.startAnimation(blink);
-        t.setText(""+TeamAFouls);
+        AFouls.startAnimation(blink);
+        AFouls.setText(""+TeamAFouls);
     }
     public void ShowTeamBFouls (int TeamBFouls)
     {
-        TextView t=findViewById(R.id.TeamBFoulsText);
-        t.startAnimation(blink);
-        t.setText(""+TeamBFouls);
-
+        BFouls.startAnimation(blink);
+        BFouls.setText(""+TeamBFouls);
     }
     public void reset (View view)
     {
