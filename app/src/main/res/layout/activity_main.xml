@@ -24,19 +24,12 @@
                 android:layout_weight="1"
                 >
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/teams"
                     android:text="@string/Team_a"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/Team_score"
                     />
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/updatetext"
                     android:text="@string/_0"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/UpdateTextView"
-                    android:layout_marginTop="@dimen/team_margintop"
                     android:id="@+id/TeamAPointsText"/>
                 <Button
                     android:text="@string/goal"
@@ -56,18 +49,11 @@
                 android:layout_weight="1"
                 >
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Team_V"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/Team_score"/>
+                    style="@style/teams"
+                    android:text="@string/Team_V" />
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/updatetext"
                     android:text="@string/_0"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/UpdateTextView"
-                    android:layout_marginTop="@dimen/team_margintop"
                     android:id="@+id/TeamBPointsText"
                     />
                 <Button
@@ -93,19 +79,12 @@
                 android:orientation="vertical"
                 android:layout_weight="1">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/teams"
                     android:text="@string/team_a_foul"
-                    android:textSize="@dimen/Team_Foul"
-                    android:layout_gravity="center"
                     />
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/updatetext"
                     android:text="@string/_0"
-                    android:layout_marginTop="@dimen/UpdateTextViewMarginTop"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/UpdateTextView"
                     android:id="@+id/TeamAFoulsText" />
                 <Button
                     style="@style/GreenButton"
@@ -124,19 +103,12 @@
                 android:orientation="vertical"
                 android:layout_weight="1">
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/teams"
                     android:text="@string/team_b_foul"
-                    android:textSize="@dimen/Team_Foul"
-                    android:layout_gravity="center"
                     />
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/updatetext"
                     android:text="@string/_0"
-                    android:layout_marginTop="@dimen/UpdateTextViewMarginTop"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/UpdateTextView"
                     android:id="@+id/TeamBFoulsText" />
                 <Button
                     style="@style/GreenButton"
@@ -157,11 +129,9 @@
             android:textAlignment="center"/>
         <Button
             android:layout_marginTop="32dp"
-        android:layout_height="wrap_content"
         style="@style/GreenButton"
         android:text="@string/reset"
         android:id="@+id/resetButton"
-        android:textAllCaps="false"
         android:onClick="reset"
         />
     </LinearLayout>

@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorButtonNormal">#4caf50</item>
         <item name="colorPrimary">#4caf50</item>
-        <item name="android:statusBarColor">#4caf50</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#4caf50</item>
     </style>
     <style name="GreenButton" parent="@android:style/TextAppearance">
         <item name="android:textSize">@dimen/Team_score</item>
@@ -14,5 +13,21 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#353535</item>
+    </style>
+
+    <style name="teams" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/Team_score</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="updatetext" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/UpdateTextView</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/UpdateTextViewMarginTop</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#646464</item>
     </style>
 </resources>
