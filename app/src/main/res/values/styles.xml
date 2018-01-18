@@ -3,14 +3,14 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorButtonNormal">#4caf50</item>
+        <item name="colorButtonNormal">@color/button</item>
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="android:statusBarColor" tools:targetApi="lollipop">#4caf50</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/statusbar</item>
     </style>
     <style name="GreenButton" parent="@android:style/TextAppearance">
         <item name="android:textSize">@dimen/Team_score</item>
-        <item name="android:layout_marginLeft">16dp</item>
-        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">@dimen/MarginLeft</item>
+        <item name="android:layout_marginRight">@dimen/MarginRight</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -39,5 +39,27 @@
         <item name="android:padding">@dimen/reacttextpadding</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:visibility">invisible</item>
+    </style>
+    <style name="LinearLayout4" >
+        <item name="android:layout_width">@dimen/linearlayout4wdth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">@dimen/linearlayout4weight</item>
+    </style>
+    <style name="LinearBlock2" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="line">
+        <item name="android:layout_width">@dimen/linewidth</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line</item>
+    </style>
+    <style name="horizontalline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/linewidth</item>
+        <item name="android:background">@color/line</item>
+        <item name="android:orientation">horizontal</item>
     </style>
 </resources>

@@ -12,6 +12,7 @@
     <dimen name="resetButtonMarginTop">32dp</dimen>
     <dimen name="reacttextsize">108sp</dimen>
     <dimen name="reacttextpadding">16dp</dimen>
-
+    <dimen name="linearlayout4wdth">0dp</dimen>
+    <dimen name="linearlayout4weight">1</dimen>
 
 </resources>

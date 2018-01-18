@@ -10,35 +10,15 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Animation blink,zoom_fade;
-    TextView react;
-    TextView BFouls,AFouls,BPoints,APoints;
-    int TeamApoints=0;
-    int TeamAFouls=0;
-    int TeamBPoints=0;
-    int TeamBFouls=0;
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        // Save the user's current game state
-        savedInstanceState.putInt(APOINTS,TeamApoints);
-        savedInstanceState.putInt(BPOINTS, TeamBPoints);
-        savedInstanceState.putInt(AFOULS,TeamAFouls);
-        savedInstanceState.putInt(BFOULS,TeamBFouls);
-        // Always call the superclass so it can save the view hierarchy state
-        super.onSaveInstanceState(savedInstanceState);
-    }
+    TextView react,BFouls,AFouls,BPoints,APoints;
+    int TeamAFouls,TeamBPoints,TeamBFouls,TeamApoints;
+    String PointsOfTeamA = "APOINTS",PointsOfTeamB="BPOINTS",FoulsOfTeamA="AFOULS",FoulsOfTeamB="BFOULS";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        if (savedInstanceState != null) {
-            // Restore value of members from saved state
-            BFouls = savedInstanceState.getInt(TeamBFouls);
-            AFouls = savedInstanceState.getInt(TeamAFouls);
-            APoints = savedInstanceState.getInt(TeamApoints);
-            BPoints = savedInstanceState.getInt(TeamBPoints);
-        }
 
         blink = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
         zoom_fade = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoomin_fadeout);
@@ -64,7 +44,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt(PointsOfTeamA,TeamApoints);
+        savedInstanceState.putInt(PointsOfTeamB, TeamBPoints);
+        savedInstanceState.putInt(FoulsOfTeamA,TeamAFouls);
+        savedInstanceState.putInt(FoulsOfTeamB,TeamBFouls);
+        super.onSaveInstanceState(savedInstanceState);
+    }
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        TeamApoints = savedInstanceState.getInt(PointsOfTeamA);
+        TeamBPoints = savedInstanceState.getInt(PointsOfTeamB);
+        TeamAFouls = savedInstanceState.getInt(FoulsOfTeamA);
+        TeamBFouls = savedInstanceState.getInt(FoulsOfTeamB);
+        ShowTeamAPoints(TeamApoints);
+        ShowTeamAFouls(TeamAFouls);
+        ShowTeamBPoints(TeamBPoints);
+        ShowTeamBFouls(TeamBFouls);
+    }
     public void TeamApoints (View view)
     {
         react.setVisibility(View.VISIBLE);

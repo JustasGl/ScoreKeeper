@@ -14,14 +14,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/LinearBlock2">
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
+                    style="@style/LinearLayout4"
                     >
                     <TextView
                         style="@style/teams"
@@ -38,15 +33,10 @@
                         />
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="@dimen/linewidth"
-                    android:layout_height="match_parent"
-                    android:background="@color/line">
+                    style="@style/line">
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
+                    style="@style/LinearLayout4"
                     >
                     <TextView
                         style="@style/teams"
@@ -64,20 +54,12 @@
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/linewidth"
-                android:background="@color/line">
+                style="@style/horizontalline">
             </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
+                style="@style/LinearBlock2">
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    style="@style/LinearLayout4">
                     <TextView
                         style="@style/teams"
                         android:text="@string/team_a_foul"
@@ -93,15 +75,10 @@
                         />
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="@dimen/linewidth"
-                    android:layout_height="match_parent"
-                    android:background="@color/line">
+                    style="@style/line">
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    style="@style/LinearLayout4">
                     <TextView
                         style="@style/teams"
                         android:text="@string/team_b_foul"
