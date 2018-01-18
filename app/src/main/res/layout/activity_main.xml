@@ -5,135 +5,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.scorekeeper.MainActivity">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        tools:context="com.example.android.scorekeeper.MainActivity">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                >
-                <TextView
-                    style="@style/teams"
-                    android:text="@string/Team_a"
-                    />
-                <TextView
-                    style="@style/updatetext"
-                    android:text="@string/_0"
-                    android:id="@+id/TeamAPointsText"/>
-                <Button
-                    android:text="@string/goal"
-                   style="@style/GreenButton"
-                    android:onClick="TeamApoints"
-                    />
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        style="@style/teams"
+                        android:text="@string/Team_a"
+                        />
+                    <TextView
+                        style="@style/updatetext"
+                        android:text="@string/_0"
+                        android:id="@+id/TeamAPointsText"/>
+                    <Button
+                        android:text="@string/goal"
+                        style="@style/GreenButton"
+                        android:onClick="TeamApoints"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/linewidth"
+                    android:layout_height="match_parent"
+                    android:background="@color/line">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        style="@style/teams"
+                        android:text="@string/Team_V" />
+                    <TextView
+                        style="@style/updatetext"
+                        android:text="@string/_0"
+                        android:id="@+id/TeamBPointsText"
+                        />
+                    <Button
+                        android:id="@+id/button"
+                        style="@style/GreenButton"
+                        android:onClick="TeamBPoints"
+                        android:text="@string/goal" />
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="@dimen/linewidth"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/linewidth"
                 android:background="@color/line">
             </LinearLayout>
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                >
-                <TextView
-                    style="@style/teams"
-                    android:text="@string/Team_V" />
-                <TextView
-                    style="@style/updatetext"
-                    android:text="@string/_0"
-                    android:id="@+id/TeamBPointsText"
-                    />
-                <Button
-                    android:id="@+id/button"
-                    style="@style/GreenButton"
-                    android:onClick="TeamBPoints"
-                    android:text="@string/goal" />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/linewidth"
-            android:background="@color/line">
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-                <TextView
-                    style="@style/teams"
-                    android:text="@string/team_a_foul"
-                    />
-                <TextView
-                    style="@style/updatetext"
-                    android:text="@string/_0"
-                    android:id="@+id/TeamAFoulsText" />
-                <Button
-                    style="@style/GreenButton"
-                    android:text="@string/foul"
-                    android:onClick="TeamAFouls"
-                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        style="@style/teams"
+                        android:text="@string/team_a_foul"
+                        />
+                    <TextView
+                        style="@style/updatetext"
+                        android:text="@string/_0"
+                        android:id="@+id/TeamAFoulsText" />
+                    <Button
+                        style="@style/GreenButton"
+                        android:text="@string/foul"
+                        android:onClick="TeamAFouls"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/linewidth"
+                    android:layout_height="match_parent"
+                    android:background="@color/line">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        style="@style/teams"
+                        android:text="@string/team_b_foul"
+                        />
+                    <TextView
+                        style="@style/updatetext"
+                        android:text="@string/_0"
+                        android:id="@+id/TeamBFoulsText" />
+                    <Button
+                        style="@style/GreenButton"
+                        android:text="@string/foul"
+                        android:onClick="TeamBFouls"
+                        />
+                </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="@dimen/linewidth"
-                android:layout_height="match_parent"
-                android:background="@color/line">
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-                <TextView
-                    style="@style/teams"
-                    android:text="@string/team_b_foul"
-                    />
-                <TextView
-                    style="@style/updatetext"
-                    android:text="@string/_0"
-                    android:id="@+id/TeamBFoulsText" />
-                <Button
-                    style="@style/GreenButton"
-                    android:text="@string/foul"
-                    android:onClick="TeamBFouls"
-                    />
-            </LinearLayout>
+            <TextView
+                style="@style/react"
+                android:text="@string/goal"
+                android:id="@+id/react" />
+            <Button
+                android:layout_marginTop="@dimen/resetButtonMarginTop"
+                style="@style/GreenButton"
+                android:text="@string/reset"
+                android:id="@+id/resetButton"
+                android:onClick="reset"
+                />
         </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Goal"
-            android:id="@+id/react"
-            android:textSize="108sp"
-            android:padding="16dp"
-            android:textAllCaps="true"
-            android:visibility="invisible"
-            android:textAlignment="center"/>
-        <Button
-            android:layout_marginTop="32dp"
-        style="@style/GreenButton"
-        android:text="@string/reset"
-        android:id="@+id/resetButton"
-        android:onClick="reset"
-        />
-    </LinearLayout>
-</RelativeLayout>
-    </ScrollView>
+    </RelativeLayout>
+</ScrollView>

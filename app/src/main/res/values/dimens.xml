@@ -9,4 +9,9 @@
     <dimen name="Team_score">16sp</dimen>
     <dimen name="team_margintop">16dp</dimen>
     <dimen name="linewidth">1dp</dimen>
+    <dimen name="resetButtonMarginTop">32dp</dimen>
+    <dimen name="reacttextsize">108sp</dimen>
+    <dimen name="reacttextpadding">16dp</dimen>
+
+
 </resources>

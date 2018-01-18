@@ -12,11 +12,33 @@ public class MainActivity extends AppCompatActivity {
     Animation blink,zoom_fade;
     TextView react;
     TextView BFouls,AFouls,BPoints,APoints;
-    
+    int TeamApoints=0;
+    int TeamAFouls=0;
+    int TeamBPoints=0;
+    int TeamBFouls=0;
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putInt(APOINTS,TeamApoints);
+        savedInstanceState.putInt(BPOINTS, TeamBPoints);
+        savedInstanceState.putInt(AFOULS,TeamAFouls);
+        savedInstanceState.putInt(BFOULS,TeamBFouls);
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (savedInstanceState != null) {
+            // Restore value of members from saved state
+            BFouls = savedInstanceState.getInt(TeamBFouls);
+            AFouls = savedInstanceState.getInt(TeamAFouls);
+            APoints = savedInstanceState.getInt(TeamApoints);
+            BPoints = savedInstanceState.getInt(TeamBPoints);
+        }
 
         blink = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
         zoom_fade = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoomin_fadeout);
@@ -42,10 +64,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    int TeamApoints=0;
-    int TeamAFouls=0;
-    int TeamBPoints=0;
-    int TeamBFouls=0;
+
     public void TeamApoints (View view)
     {
         react.setVisibility(View.VISIBLE);
